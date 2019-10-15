@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3290A723545F27001991BE /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290A623545F27001991BE /* Download.swift */; };
 		8D59C3EC2352D849008BD62C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C3EB2352D849008BD62C /* AppDelegate.swift */; };
 		8D59C3EE2352D849008BD62C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C3ED2352D849008BD62C /* SceneDelegate.swift */; };
 		8D59C3F02352D849008BD62C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C3EF2352D849008BD62C /* ViewController.swift */; };
@@ -15,6 +16,9 @@
 		8D59C3F82352D84A008BD62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D59C3F62352D84A008BD62C /* LaunchScreen.storyboard */; };
 		8D59C4032352D84B008BD62C /* MasterGCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C4022352D84B008BD62C /* MasterGCDTests.swift */; };
 		8D59C40E2352D84B008BD62C /* MasterGCDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C40D2352D84B008BD62C /* MasterGCDUITests.swift */; };
+		8D59C41C2352E766008BD62C /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C41B2352E766008BD62C /* DownloadTableViewCell.swift */; };
+		8D59C41E23537CB1008BD62C /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C41D23537CB1008BD62C /* DownloadManager.swift */; };
+		8D59C42023537D86008BD62C /* FileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C41F23537D86008BD62C /* FileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D3290A623545F27001991BE /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		8D59C3E82352D849008BD62C /* MasterGCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterGCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D59C3EB2352D849008BD62C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D59C3ED2352D849008BD62C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		8D59C4092352D84B008BD62C /* MasterGCDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterGCDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D59C40D2352D84B008BD62C /* MasterGCDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterGCDUITests.swift; sourceTree = "<group>"; };
 		8D59C40F2352D84B008BD62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D59C41B2352E766008BD62C /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
+		8D59C41D23537CB1008BD62C /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		8D59C41F23537D86008BD62C /* FileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				8D59C3F42352D84A008BD62C /* Assets.xcassets */,
 				8D59C3F62352D84A008BD62C /* LaunchScreen.storyboard */,
 				8D59C3F92352D84A008BD62C /* Info.plist */,
+				8D59C41B2352E766008BD62C /* DownloadTableViewCell.swift */,
+				8D59C41D23537CB1008BD62C /* DownloadManager.swift */,
+				8D59C41F23537D86008BD62C /* FileModel.swift */,
+				8D3290A623545F27001991BE /* Download.swift */,
 			);
 			path = MasterGCD;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D59C3F02352D849008BD62C /* ViewController.swift in Sources */,
+				8D59C42023537D86008BD62C /* FileModel.swift in Sources */,
+				8D59C41E23537CB1008BD62C /* DownloadManager.swift in Sources */,
+				8D59C41C2352E766008BD62C /* DownloadTableViewCell.swift in Sources */,
 				8D59C3EC2352D849008BD62C /* AppDelegate.swift in Sources */,
+				8D3290A723545F27001991BE /* Download.swift in Sources */,
 				8D59C3EE2352D849008BD62C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

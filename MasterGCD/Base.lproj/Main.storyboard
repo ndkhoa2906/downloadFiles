@@ -1,24 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GAH-ue-M8S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Download Files-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MasterGCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-Vc-xxj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="8PT-AS-nbu" customClass="DownloadTableViewCell" customModule="MasterGCD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8PT-AS-nbu" id="4X8-sK-T58">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ojb-2i-eAa">
+                                                    <rect key="frame" x="30" y="59" width="354" height="2"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="SmJ-5P-raf"/>
+                                                    </constraints>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-gw-mMq">
+                                                    <rect key="frame" x="30" y="30" width="42" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="ZtI-Pd-OV6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-Du-V5f">
+                                                    <rect key="frame" x="107" y="65" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="4cc-EI-5mm"/>
+                                                        <constraint firstAttribute="height" constant="21" id="rbv-Nk-6T4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-vH-y0a">
+                                                    <rect key="frame" x="274" y="25" width="110" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT3-KX-dH9">
+                                                            <rect key="frame" x="0.0" y="4" width="30" height="22"/>
+                                                            <state key="normal" image="play.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="downloadFile:" destination="8PT-AS-nbu" eventType="touchUpInside" id="MC2-qA-Vh6"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njA-gy-SEe">
+                                                            <rect key="frame" x="40" y="4" width="30" height="22"/>
+                                                            <state key="normal" image="pause.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="pauseDownload:" destination="8PT-AS-nbu" eventType="touchUpInside" id="Qqg-xn-cyP"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9V-BD-xZg">
+                                                            <rect key="frame" x="80" y="4" width="30" height="22"/>
+                                                            <state key="normal" image="xmark" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="cancelDownload:" destination="8PT-AS-nbu" eventType="touchUpInside" id="1i5-OI-iBm"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="I4W-WW-DR5"/>
+                                                        <constraint firstAttribute="width" constant="110" id="pPM-Fw-JwQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ojb-2i-eAa" firstAttribute="centerY" secondItem="4X8-sK-T58" secondAttribute="centerY" constant="10" id="4mW-Kd-fkA"/>
+                                                <constraint firstItem="ojb-2i-eAa" firstAttribute="leading" secondItem="4X8-sK-T58" secondAttribute="leadingMargin" constant="10" id="7WP-tb-ORo"/>
+                                                <constraint firstItem="IBm-gw-mMq" firstAttribute="leading" secondItem="4X8-sK-T58" secondAttribute="leadingMargin" constant="10" id="HGt-p7-RJY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mcI-vH-y0a" secondAttribute="trailing" constant="10" id="OLV-WD-4WA"/>
+                                                <constraint firstItem="6I2-Du-V5f" firstAttribute="centerX" secondItem="ojb-2i-eAa" secondAttribute="centerX" id="Stl-oP-2Sx"/>
+                                                <constraint firstItem="mcI-vH-y0a" firstAttribute="centerY" secondItem="4X8-sK-T58" secondAttribute="centerY" constant="-10" id="eKS-aW-Op9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ojb-2i-eAa" secondAttribute="trailing" constant="10" id="fjK-hp-VDV"/>
+                                                <constraint firstItem="IBm-gw-mMq" firstAttribute="centerY" secondItem="4X8-sK-T58" secondAttribute="centerY" constant="-10" id="gn7-Sf-ILz"/>
+                                                <constraint firstItem="6I2-Du-V5f" firstAttribute="bottom" secondItem="ojb-2i-eAa" secondAttribute="bottom" constant="25" id="jtL-Mb-5zI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnCancel" destination="N9V-BD-xZg" id="cIQ-ki-NXB"/>
+                                            <outlet property="btnDownload" destination="kT3-KX-dH9" id="HFi-Pw-6in"/>
+                                            <outlet property="btnPause" destination="njA-gy-SEe" id="XFt-lg-Xdx"/>
+                                            <outlet property="lblName" destination="IBm-gw-mMq" id="cUm-Ek-ge8"/>
+                                            <outlet property="lblPercent" destination="6I2-Du-V5f" id="VEy-W7-jPH"/>
+                                            <outlet property="progressView" destination="ojb-2i-eAa" id="emd-E0-wJW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="943-tb-web"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="a7a-6N-19h"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4dS-Vc-xxj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1yI-Pg-q4t"/>
+                            <constraint firstItem="4dS-Vc-xxj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="9Q9-27-bhl"/>
+                            <constraint firstItem="4dS-Vc-xxj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AV1-wz-PMm"/>
+                            <constraint firstItem="4dS-Vc-xxj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qpj-rP-quG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Download Files" id="3FF-p3-jzr"/>
+                    <connections>
+                        <outlet property="tableView" destination="4dS-Vc-xxj" id="7c3-Ey-RkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ixz-VN-0k4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GAH-ue-M8S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3u8-hd-x5R">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LTn-13-FPA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yit-fa-gcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="58" height="64"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
